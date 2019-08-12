@@ -296,7 +296,8 @@ object IterableOnce {
   * @define coll collection
   *
   */
-trait IterableOnceOps[+A, +CC[_], +C] extends Any { this: IterableOnce[A] =>
+trait IterableOnceOps[+A, +CC[_], +C] extends Any with IterableOnce[A] {
+
   /////////////////////////////////////////////////////////////// Abstract methods that must be implemented
 
   /** Produces a $coll containing cumulative results of applying the
